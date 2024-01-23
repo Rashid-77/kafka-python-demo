@@ -1,7 +1,7 @@
 This demo uses confluent kafka python client and zookeeper in the docker.
 Python3.10, docker V2
 
-After start topics are created, then order service sends message "how many cups?". Product servic answers how many cups left and counts down it until they are reach zero. Message log beetwen service are saving in the log file.
+After start topics are created, then order service sends message "how many cups?". Product servic answers how many cups left and counts down it until they reach zero. Message log beetwen service are saving in the "log.log" file.
 
 To start project, open terminal and run
 
