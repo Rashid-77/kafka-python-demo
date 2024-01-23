@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  creationTimestamp: null
+  labels:
+    name: product-demo
+  name: product-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-demo
+  template:
+    metadata:
+      labels:
+        app: product-demo
+    spec:
+      containers:
+      - image: rash77/kafka-python-demo-product:v0.0.1
+        imagePullPolicy: Always
+        name: product-demo
+        resources: {}

@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  creationTimestamp: null
+  labels:
+    name: order-demo
+  name: order-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-demo
+  template:
+    metadata:
+      labels:
+        app: order-demo
+    spec:
+      containers:
+      - image: rash77/kafka-python-demo-order:v0.0.1
+        imagePullPolicy: Always
+        name: order-demo
+        resources: {}
